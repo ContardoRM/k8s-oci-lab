@@ -1,0 +1,14 @@
+[Unit]
+Description=Kubernetes host firewall bootstrap
+After=network-online.target netfilter-persistent.service ufw.service
+Wants=network-online.target
+Before=kubelet.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=-/etc/default/k8s-host-firewall
+ExecStart=/usr/local/sbin/k8s-host-firewall.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

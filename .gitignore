@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Logs / temporary
+*.log
+*.tmp
+*.swp
+
+# Environment / secrets
+.env
+.env.*
+secrets/
+credentials/
+
+# Kubernetes
+*.kubeconfig
+admin.conf
+super-admin.conf
+
+# Keys / certificates
+*.pem
+*.key
+*.crt
+*.p12
+
+# SSH
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# Terraform - reserved for future use
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
